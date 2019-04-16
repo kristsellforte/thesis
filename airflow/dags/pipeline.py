@@ -7,7 +7,7 @@ from datetime import datetime
 from airflow.operators.python_operator import PythonOperator
 
 from launcher.launcher import launch_docker_container
-from launcher.docker import do_test_docker
+from launcher.launcher_docker import do_test_docker
 
 default_args = {
     'owner': 'airflow',
@@ -23,7 +23,7 @@ def read_xcoms(**context):
         logging.info(f'[{idx}] I have received data: {data} from task {task_id}')
 
 
-with DAG('pipeline_python_2', default_args=default_args) as dag:
+with DAG('pipeline', default_args=default_args) as dag:
     # t1 = BashOperator(
     #     task_id='print_date1',
     #     bash_command='date')
@@ -33,22 +33,22 @@ with DAG('pipeline_python_2', default_args=default_args) as dag:
         python_callable=do_test_docker
     )
 
-    t2_id = 'do_task_one'
+    t2_id = 'do_linear_regression'
     t2 = PythonOperator(
         task_id=t2_id,
         provide_context=True,
         op_kwargs={
-            'image_name': 'task1'
+            'image_name': 'linear_regression'
         },
         python_callable=launch_docker_container
     )
 
-    t3_id = 'generate_data_for_next_task'
+    t3_id = 'score_linear_regression'
     t3 = PythonOperator(
         task_id=t3_id,
         provide_context=True,
         op_kwargs={
-            'image_name': 'task2'
+            'image_name': 'score_linear_regression'
         },
         python_callable=launch_docker_container
     )
@@ -73,5 +73,4 @@ with DAG('pipeline_python_2', default_args=default_args) as dag:
         }
     )
 
-    # t2_2 >> t2_3
     t1 >> t2 >> t3 >> t4

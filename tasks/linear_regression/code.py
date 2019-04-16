@@ -3,6 +3,8 @@ from sklearn import linear_model
 import statsmodels.api as sm
 import json
 import pickle
+import tarfile
+import os
 from datetime import datetime
 
 
@@ -41,9 +43,13 @@ def get_scores(scores_path):
 
 def save_model(model, scores):
     version_number = int(max(scores.keys())) + 1
-    pickle_path = './models/linear_regression/' + str(version_number) + '.pkl'
-
+    pickle_path = '/tmp/' + str(version_number) + '.pkl'
     pickle.dump(model, open(pickle_path, 'wb'))
+
+    # save tar for sharing across airflow tasks
+    with tarfile.open('/tmp/result.tgz', "w:gz") as tar:
+        abs_path = os.path.abspath(pickle_path)
+        tar.add(abs_path, arcname=os.path.basename(pickle_path), recursive=False)
 
 
 def main():

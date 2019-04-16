@@ -1,3 +1,13 @@
+# if member.name.find(".pkl") != -1:
+#     # treat as pickle
+#     log.info(f)
+#     result = pickle.load(f)
+# elif member.name.find(".json") != -1:
+#     # treat as json
+#     result = json.loads(f.read())
+# else:
+#     result = {}
+
 import logging
 import docker
 import tarfile
