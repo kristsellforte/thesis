@@ -1,8 +1,57 @@
+import logging
 import docker
+import tarfile
+import json
+import os
+import tempfile
 
+from airflow.models import TaskInstance
 from docker import Client
+from docker.errors import NotFound
 
 log = logging.getLogger(__name__)
+
+
+def combine_xcom_values(xcoms):
+    if xcoms is None or xcoms == [] or xcoms == () or xcoms == (None, ):
+        return {}
+    elif len(xcoms) == 1:
+        return dict(xcoms)
+
+    result = {}
+    egible_xcoms = (d for d in xcoms if d is not None and len(d) > 0)
+    for d in egible_xcoms:
+        for k, v in d.items():
+            result[k] = v
+    return result
+
+
+def untar_file_and_get_result_json(client, container):
+    try:
+        tar_data_stream, stat = client.get_archive(container=container, path='/tmp/result.tgz')
+    except NotFound:
+        return dict()
+
+    with tempfile.NamedTemporaryFile() as tmp:
+        for chunk in tar_data_stream.stream():
+            tmp.write(chunk)
+        tmp.seek(0)
+        with tarfile.open(mode='r', fileobj=tmp) as tar:
+            tar.extractall()
+            tar.close()
+
+    with tarfile.open('result.tgz') as tf:
+        for member in tf.getmembers():
+            f = tf.extractfile(member)
+            result = json.loads(f.read())
+            os.remove('result.tgz')
+            return result
+
+
+def pull_all_parent_xcoms(context):
+    xcoms = context['task_instance'].xcom_pull(task_ids=(context['task'].upstream_task_ids))
+    xcoms_combined = combine_xcom_values(xcoms)
+    return json.dumps(xcoms_combined)
 
 
 def launch_docker_container(**context):
@@ -10,7 +59,14 @@ def launch_docker_container(**context):
     client: Client = docker.from_env()
 
     log.info(f"Creating image {image_name}")
-    container = client.create_container(image=image_name)
+
+    execution_id = context['dag_run'].run_id
+    environment = {
+        'EXECUTION_ID': execution_id
+    }
+
+    args_json = pull_all_parent_xcoms(context)
+    container = client.create_container(image=image_name, environment=environment, command=args_json)
 
     container_id = container.get('Id')
     log.info(f"Running container with id {container_id}")
@@ -23,13 +79,8 @@ def launch_docker_container(**context):
             l = next(logs)
             log.info(f"Task log: {l}")
     except StopIteration:
-        pass
-        
-    inspect = client.inspect_container(container)
-    log.info(inspect)
-    if inspect['State']['ExitCode'] != 0:
-                raise Exception("Container has not finished with exit code 0")
+        log.info("Docker has finished!")
 
-    log.info(f"Task ends!")
-    my_id = context['my_id']
-    context['task_instance'].xcom_push('data', f'my name is {my_id}', context['execution_date'])
+    result = untar_file_and_get_result_json(client, container)
+    log.info(f"Result was {result}")
+    context['task_instance'].xcom_push('data', result, context['execution_date'])
