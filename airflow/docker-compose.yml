@@ -32,6 +32,9 @@ services:
     volumes:
       - ./requirements.txt:/requirements.txt
       - ./dags:/usr/local/airflow/dags
+      - ./data:/data
+      - ./models:/models
+      - ./scores:/scores
       # Uncomment to include custom plugins
       # - ./plugins:/usr/local/airflow/plugins
     ports:
@@ -63,6 +66,9 @@ services:
     volumes:
       - ./dags:/usr/local/airflow/dags
       - ./requirements.txt:/requirements.txt
+      - ./data:/data
+      - ./models:/models
+      - ./scores:/scores
 #      - ./plugins:/usr/local/airflow/plugins
     environment:
       - LOAD_EX=n
@@ -82,6 +88,9 @@ services:
     volumes:
       - ./dags:/usr/local/airflow/dags
       - ./requirements.txt:/requirements.txt
+      - ./data:/data
+      - ./models:/models
+      - ./scores:/scores
     environment:
       - DOCKER_HOST=tcp://socat:2375
       - FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=

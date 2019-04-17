@@ -24,16 +24,13 @@ def read_xcoms(**context):
 
 
 with DAG('pipeline', default_args=default_args) as dag:
-    # t1 = BashOperator(
-    #     task_id='print_date1',
-    #     bash_command='date')
 
     t1 = PythonOperator(
         task_id="test_docker",
         python_callable=do_test_docker
     )
 
-    t2_id = 'do_linear_regression'
+    t2_id = 'linear_regression'
     t2 = PythonOperator(
         task_id=t2_id,
         provide_context=True,
@@ -53,24 +50,13 @@ with DAG('pipeline', default_args=default_args) as dag:
         python_callable=launch_docker_container
     )
 
-    # t2_3_id = 'i_require_data_from_previous_task'
-    # t2_3 = PythonOperator(
-    #     task_id=t2_3_id,
+    # t4 = PythonOperator(
+    #     task_id='read_xcoms',
     #     provide_context=True,
+    #     python_callable=read_xcoms,
     #     op_kwargs={
-    #         'image_name': 'task3'
-    #     },
-    #     python_callable=launch_docker_container
+    #         'data_to_read': [t2_id, t3_id]
+    #     }
     # )
 
-
-    t4 = PythonOperator(
-        task_id='read_xcoms',
-        provide_context=True,
-        python_callable=read_xcoms,
-        op_kwargs={
-            'data_to_read': [t2_id, t3_id]
-        }
-    )
-
-    t1 >> t2 >> t3 >> t4
+    t1 >> t2 >> t3
