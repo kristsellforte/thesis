@@ -13,9 +13,6 @@ RUN pip install -r /requirements.txt
 
 RUN mkdir main
 
-COPY ./models ./main/models
-COPY data.csv ./main/data.csv
-COPY scores.json ./main/scores.json
 COPY code.py ./main/code.py
 
 WORKDIR main

@@ -50,6 +50,16 @@ with DAG('pipeline', default_args=default_args) as dag:
         python_callable=launch_docker_container
     )
 
+    t4_id = 'adjust_data'
+    t4 = PythonOperator(
+        task_id=t4_id,
+        provide_context=True,
+        op_kwargs={
+            'image_name': 'data_adjustment'
+        },
+        python_callable=launch_docker_container
+    )
+
     # t4 = PythonOperator(
     #     task_id='read_xcoms',
     #     provide_context=True,
@@ -59,4 +69,4 @@ with DAG('pipeline', default_args=default_args) as dag:
     #     }
     # )
 
-    t1 >> t2 >> t3
+    t1 >> t4 >> t2 >> t3

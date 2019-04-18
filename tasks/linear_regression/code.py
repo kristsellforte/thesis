@@ -43,26 +43,28 @@ def get_scores(scores_path):
 
 def save_model(model, scores):
     version_number = int(max(scores.keys())) + 1
-    pickle_path = '/tmp/' + str(version_number) + '.pkl'
+    pickle_path = '/models/linear_regression/' + str(version_number) + '.pkl'
     pickle.dump(model, open(pickle_path, 'wb'))
 
     # save tar for sharing across airflow tasks
-    with tarfile.open('/tmp/result.tgz', "w:gz") as tar:
-        abs_path = os.path.abspath(pickle_path)
-        tar.add(abs_path, arcname=os.path.basename(pickle_path), recursive=False)
+    # with tarfile.open('/tmp/result.tgz', "w:gz") as tar:
+    #     abs_path = os.path.abspath(pickle_path)
+    #     tar.add(abs_path, arcname=os.path.basename(pickle_path), recursive=False)
 
 
 def main():
-    scores_path = './scores.json'
-    data_path = './data.csv'
+    scores_path = '/scores/linear_regression.json'
+    data_path = '/data/train.csv'
+    # meme = pull_function()
     df = get_data(data_path)
     x, y = prepare_data(df)
     model = linear_regression_sklearn(x, y)
     scores = get_scores(scores_path)
+    # save_scores(scores)
     save_model(model, scores)
 
 
-if __name__ == "__main__" :
+if __name__ == "__main__":
 
     main()
 

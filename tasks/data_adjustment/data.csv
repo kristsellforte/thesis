@@ -1,0 +1,313 @@
+date;item_id;item_name;volume;unit_price;unit_cost;promo_flag;marketing;category_net_sales;category_margin;category1;category2;location
+07/01/2018;100;Chicken;38144.0;3.79;2.7;0;;451692.0;0.25;Meat;Food;Helsinki
+14/01/2018;100;Chicken;36420.0;3.79;2.66;0;;414342.0;0.25;Meat;Food;Helsinki
+21/01/2018;100;Chicken;35322.0;3.79;2.66;0;;381854.0;0.25;Meat;Food;Helsinki
+28/01/2018;100;Chicken;133974.0;2.89;2.54;1;Star promotion (TV);494738.0;0.25;Meat;Food;Helsinki
+04/02/2018;100;Chicken;119808.0;2.89;2.55;1;Star promotion (TV);461214.0;0.25;Meat;Food;Helsinki
+11/02/2018;100;Chicken;36698.0;3.59;2.67;0;;302562.0;0.25;Meat;Food;Helsinki
+18/02/2018;100;Chicken;23346.0;3.59;2.69;0;;311028.0;0.25;Meat;Food;Helsinki
+25/02/2018;100;Chicken;36844.0;3.59;2.62;0;;340518.0;0.25;Meat;Food;Helsinki
+04/03/2018;100;Chicken;34742.0;3.59;2.53;0;;352774.0;0.25;Meat;Food;Helsinki
+11/03/2018;100;Chicken;164752.0;2.5;2.47;1;Star promotion (TV);478318.0;0.25;Meat;Food;Helsinki
+18/03/2018;100;Chicken;33290.0;3.49;2.98;0;;349902.0;0.25;Meat;Food;Helsinki
+25/03/2018;100;Chicken;30664.0;3.49;2.52;0;;339930.0;0.25;Meat;Food;Helsinki
+01/04/2018;100;Chicken;32492.0;3.49;2.58;0;;328124.0;0.25;Meat;Food;Helsinki
+08/04/2018;100;Chicken;43540.0;3.49;2.54;0;;400594.0;0.25;Meat;Food;Helsinki
+15/04/2018;100;Chicken;22182.0;3.49;3.14;0;;367256.0;0.25;Meat;Food;Helsinki
+22/04/2018;100;Chicken;25622.0;3.49;2.71;0;;369396.0;0.25;Meat;Food;Helsinki
+29/04/2018;100;Chicken;23042.0;3.49;2.67;0;;337890.0;0.25;Meat;Food;Helsinki
+06/05/2018;100;Chicken;24497.0;3.49;2.67;0;;338284.0;0.25;Meat;Food;Helsinki
+13/05/2018;100;Chicken;23949.0;3.49;2.67;0;;338238.0;0.25;Meat;Food;Helsinki
+20/05/2018;100;Chicken;23477.0;3.49;2.67;0;;343208.0;0.25;Meat;Food;Helsinki
+27/05/2018;100;Chicken;23917.0;3.49;2.67;0;;347008.0;0.25;Meat;Food;Helsinki
+03/06/2018;100;Chicken;25742.0;3.49;2.67;0;;352986.0;0.25;Meat;Food;Helsinki
+10/06/2018;100;Chicken;40284.0;3.49;2.6;0;;366504.0;0.25;Meat;Food;Helsinki
+17/06/2018;100;Chicken;35848.0;3.49;2.58;0;;372664.0;0.25;Meat;Food;Helsinki
+24/06/2018;100;Chicken;32758.0;3.49;2.64;0;;337460.0;0.25;Meat;Food;Helsinki
+01/07/2018;100;Chicken;39190.0;3.49;2.57;0;;398448.0;0.25;Meat;Food;Helsinki
+08/07/2018;100;Chicken;35982.0;3.49;2.61;0;;368540.0;0.25;Meat;Food;Helsinki
+15/07/2018;100;Chicken;36576.0;3.49;2.63;0;;371914.0;0.25;Meat;Food;Helsinki
+22/07/2018;100;Chicken;36346.0;3.49;2.63;0;;363368.0;0.25;Meat;Food;Helsinki
+29/07/2018;100;Chicken;34056.0;3.49;2.62;0;;362152.0;0.25;Meat;Food;Helsinki
+05/08/2018;100;Chicken;33404.0;3.49;2.62;0;;372870.0;0.25;Meat;Food;Helsinki
+12/08/2018;100;Chicken;37688.0;3.49;2.59;0;;401170.0;0.25;Meat;Food;Helsinki
+19/08/2018;100;Chicken;37396.0;3.49;2.58;0;;409186.0;0.25;Meat;Food;Helsinki
+26/08/2018;100;Chicken;39652.0;3.49;2.61;0;;409198.0;0.25;Meat;Food;Helsinki
+02/09/2018;100;Chicken;86076.0;2.99;2.59;1;Newspaper half page;620284.0;0.25;Meat;Food;Helsinki
+09/09/2018;100;Chicken;32668.0;3.49;2.67;0;;496164.0;0.25;Meat;Food;Helsinki
+16/09/2018;100;Chicken;37956.0;3.49;2.74;0;;415016.0;0.25;Meat;Food;Helsinki
+23/09/2018;100;Chicken;36688.0;3.49;2.68;0;;426596.0;0.25;Meat;Food;Helsinki
+30/09/2018;100;Chicken;35110.0;3.49;2.68;0;;418292.0;0.25;Meat;Food;Helsinki
+07/10/2018;100;Chicken;105180.0;2.89;2.62;1;Star promotion (TV);498128.0;0.25;Meat;Food;Helsinki
+14/10/2018;100;Chicken;98928.0;2.89;2.74;1;Star promotion (TV);466830.0;0.25;Meat;Food;Helsinki
+21/10/2018;100;Chicken;35264.0;3.69;2.82;0;;383512.0;0.25;Meat;Food;Helsinki
+28/10/2018;100;Chicken;34138.0;3.69;2.69;0;;375854.0;0.25;Meat;Food;Helsinki
+04/11/2018;100;Chicken;28050.0;3.69;2.83;0;;374920.0;0.25;Meat;Food;Helsinki
+11/11/2018;100;Chicken;32066.0;3.69;2.77;0;;371690.0;0.25;Meat;Food;Helsinki
+18/11/2018;100;Chicken;30810.0;3.69;2.71;0;;376988.0;0.25;Meat;Food;Helsinki
+25/11/2018;100;Chicken;30770.0;3.69;2.69;0;;387916.0;0.25;Meat;Food;Helsinki
+02/12/2018;100;Chicken;30528.0;3.69;2.69;0;;364056.0;0.25;Meat;Food;Helsinki
+09/12/2018;100;Chicken;35048.0;3.69;2.76;0;;379086.0;0.25;Meat;Food;Helsinki
+16/12/2018;100;Chicken;121020.0;2.79;2.54;1;Star promotion (TV);485006.0;0.25;Meat;Food;Helsinki
+23/12/2018;100;Chicken;88032.0;2.79;2.77;1;Star promotion (TV);444656.0;0.25;Meat;Food;Helsinki
+30/12/2018;100;Chicken;49718.0;3.69;2.86;0;;381986.0;0.25;Meat;Food;Helsinki
+07/01/2018;101;Chocolate bar;24865.0;0.75;0.42;0;;450385.0;0.35;Sweet;Food;Helsinki
+14/01/2018;101;Chocolate bar;32265.0;0.75;0.42;0;;590175.0;0.35;Sweet;Food;Helsinki
+21/01/2018;101;Chocolate bar;33495.0;0.75;0.42;0;;620765.0;0.35;Sweet;Food;Helsinki
+28/01/2018;101;Chocolate bar;35515.0;0.75;0.42;0;;769490.0;0.35;Sweet;Food;Helsinki
+04/02/2018;101;Chocolate bar;38640.0;0.75;0.42;0;;784595.0;0.35;Sweet;Food;Helsinki
+11/02/2018;101;Chocolate bar;138635.0;0.59;0.42;1;;841135.0;0.35;Sweet;Food;Helsinki
+18/02/2018;101;Chocolate bar;127630.0;0.59;0.42;1;;830740.0;0.35;Sweet;Food;Helsinki
+25/02/2018;101;Chocolate bar;129315.0;0.59;0.42;1;;847515.0;0.35;Sweet;Food;Helsinki
+04/03/2018;101;Chocolate bar;137550.0;0.59;0.42;1;;838540.0;0.35;Sweet;Food;Helsinki
+11/03/2018;101;Chocolate bar;49595.0;0.79;0.42;0;;779205.0;0.35;Sweet;Food;Helsinki
+18/03/2018;101;Chocolate bar;53400.0;0.79;0.42;0;;864220.0;0.35;Sweet;Food;Helsinki
+25/03/2018;101;Chocolate bar;57590.0;0.79;0.42;0;;810245.0;0.35;Sweet;Food;Helsinki
+01/04/2018;101;Chocolate bar;51095.0;0.79;0.42;0;;751040.0;0.35;Sweet;Food;Helsinki
+08/04/2018;101;Chocolate bar;49195.0;0.79;0.42;0;;652975.0;0.35;Sweet;Food;Helsinki
+15/04/2018;101;Chocolate bar;53030.0;0.79;0.42;0;;751300.0;0.35;Sweet;Food;Helsinki
+22/04/2018;101;Chocolate bar;52725.0;0.79;0.42;0;;779550.0;0.35;Sweet;Food;Helsinki
+29/04/2018;101;Chocolate bar;49160.0;0.79;0.42;0;;777885.0;0.35;Sweet;Food;Helsinki
+06/05/2018;101;Chocolate bar;46995.0;0.79;0.42;0;;756565.0;0.35;Sweet;Food;Helsinki
+13/05/2018;101;Chocolate bar;41675.0;0.79;0.42;0;;737810.0;0.35;Sweet;Food;Helsinki
+20/05/2018;101;Chocolate bar;45180.0;0.79;0.42;0;;753150.0;0.35;Sweet;Food;Helsinki
+27/05/2018;101;Chocolate bar;43175.0;0.79;0.42;0;;745590.0;0.35;Sweet;Food;Helsinki
+03/06/2018;101;Chocolate bar;44815.0;0.79;0.42;0;;748070.0;0.35;Sweet;Food;Helsinki
+10/06/2018;101;Chocolate bar;45306.0;0.75;0.42;0;;676765.0;0.35;Sweet;Food;Helsinki
+17/06/2018;101;Chocolate bar;39375.0;0.75;0.42;0;;675170.0;0.35;Sweet;Food;Helsinki
+24/06/2018;101;Chocolate bar;37395.0;0.75;0.42;0;;677205.0;0.35;Sweet;Food;Helsinki
+01/07/2018;101;Chocolate bar;37730.0;0.75;0.42;0;;642510.0;0.35;Sweet;Food;Helsinki
+08/07/2018;101;Chocolate bar;32595.0;0.75;0.42;0;;611480.0;0.35;Sweet;Food;Helsinki
+15/07/2018;101;Chocolate bar;34205.0;0.75;0.42;0;;619460.0;0.35;Sweet;Food;Helsinki
+22/07/2018;101;Chocolate bar;30655.0;0.75;0.42;0;;569275.0;0.35;Sweet;Food;Helsinki
+29/07/2018;101;Chocolate bar;31015.0;0.75;0.42;0;;547595.0;0.35;Sweet;Food;Helsinki
+05/08/2018;101;Chocolate bar;32535.0;0.75;0.42;0;;611510.0;0.35;Sweet;Food;Helsinki
+12/08/2018;101;Chocolate bar;34995.0;0.75;0.42;0;;676365.0;0.35;Sweet;Food;Helsinki
+19/08/2018;101;Chocolate bar;41330.0;0.75;0.42;0;;748235.0;0.35;Sweet;Food;Helsinki
+26/08/2018;101;Chocolate bar;401540.0;0.5;0.42;1;Traffic driver (Leaflet);896265.0;0.35;Sweet;Food;Helsinki
+02/09/2018;101;Chocolate bar;54995.0;0.75;0.42;0;;757650.0;0.35;Sweet;Food;Helsinki
+09/09/2018;101;Chocolate bar;48990.0;0.75;0.42;0;;748255.0;0.35;Sweet;Food;Helsinki
+16/09/2018;101;Chocolate bar;38975.0;0.75;0.42;0;;768085.0;0.35;Sweet;Food;Helsinki
+23/09/2018;101;Chocolate bar;42685.0;0.75;0.42;0;;793065.0;0.35;Sweet;Food;Helsinki
+30/09/2018;101;Chocolate bar;46510.0;0.75;0.42;0;;785555.0;0.35;Sweet;Food;Helsinki
+07/10/2018;101;Chocolate bar;48255.0;0.75;0.42;0;;806270.0;0.35;Sweet;Food;Helsinki
+14/10/2018;101;Chocolate bar;74795.0;0.75;0.42;0;;775870.0;0.35;Sweet;Food;Helsinki
+21/10/2018;101;Chocolate bar;461350.0;0.5;0.42;1;Traffic driver (Leaflet);916920.0;0.35;Sweet;Food;Helsinki
+28/10/2018;101;Chocolate bar;59725.0;0.75;0.42;0;;747205.0;0.35;Sweet;Food;Helsinki
+04/11/2018;101;Chocolate bar;51790.0;0.75;0.42;0;;747305.0;0.35;Sweet;Food;Helsinki
+11/11/2018;101;Chocolate bar;51040.0;0.75;0.42;0;;741540.0;0.35;Sweet;Food;Helsinki
+18/11/2018;101;Chocolate bar;51405.0;0.75;0.42;0;;767685.0;0.35;Sweet;Food;Helsinki
+25/11/2018;101;Chocolate bar;42700.0;0.75;0.42;0;;745500.0;0.35;Sweet;Food;Helsinki
+02/12/2018;101;Chocolate bar;45565.0;0.75;0.42;0;;763175.0;0.35;Sweet;Food;Helsinki
+09/12/2018;101;Chocolate bar;39570.0;0.75;0.42;0;;675810.0;0.35;Sweet;Food;Helsinki
+16/12/2018;101;Chocolate bar;43055.0;0.75;0.42;0;;707070.0;0.35;Sweet;Food;Helsinki
+23/12/2018;101;Chocolate bar;27555.0;0.75;0.42;0;;479015.0;0.35;Sweet;Food;Helsinki
+30/12/2018;101;Chocolate bar;16525.0;0.75;0.42;0;;324830.0;0.35;Sweet;Food;Helsinki
+07/01/2018;102;Meatballs;15484.0;2.69;1.86;0;;697176.0;0.25;Meat;Food;Helsinki
+14/01/2018;102;Meatballs;18908.0;2.69;1.93;0;;927316.0;0.25;Meat;Food;Helsinki
+21/01/2018;102;Meatballs;18308.0;2.69;1.87;0;;876968.0;0.25;Meat;Food;Helsinki
+28/01/2018;102;Meatballs;17016.0;2.69;1.88;0;;906644.0;0.25;Meat;Food;Helsinki
+04/02/2018;102;Meatballs;21972.0;2.69;1.87;0;;920376.0;0.25;Meat;Food;Helsinki
+11/02/2018;102;Meatballs;24332.0;2.69;1.87;0;;918916.0;0.25;Meat;Food;Helsinki
+18/02/2018;102;Meatballs;22500.0;2.69;1.98;0;;880076.0;0.25;Meat;Food;Helsinki
+25/02/2018;102;Meatballs;24240.0;2.69;1.9;0;;869528.0;0.25;Meat;Food;Helsinki
+04/03/2018;102;Meatballs;26592.0;2.69;1.86;0;;911392.0;0.25;Meat;Food;Helsinki
+11/03/2018;102;Meatballs;24852.0;2.69;1.86;0;;917608.0;0.25;Meat;Food;Helsinki
+18/03/2018;102;Meatballs;26820.0;2.69;1.88;0;;929548.0;0.25;Meat;Food;Helsinki
+25/03/2018;102;Meatballs;59856.0;2.29;1.49;1;Traffic driver (Leaflet);1047400.0;0.25;Meat;Food;Helsinki
+01/04/2018;102;Meatballs;54256.0;2.29;1.61;1;Traffic driver (Leaflet);1030652.0;0.25;Meat;Food;Helsinki
+08/04/2018;102;Meatballs;20228.0;2.69;2.05;0;;919836.0;0.25;Meat;Food;Helsinki
+15/04/2018;102;Meatballs;23780.0;2.69;2.09;0;;924200.0;0.25;Meat;Food;Helsinki
+22/04/2018;102;Meatballs;21352.0;2.69;1.96;0;;924724.0;0.25;Meat;Food;Helsinki
+29/04/2018;102;Meatballs;20096.0;2.69;1.88;0;;924876.0;0.25;Meat;Food;Helsinki
+06/05/2018;102;Meatballs;20884.0;2.69;1.89;0;;784124.0;0.25;Meat;Food;Helsinki
+13/05/2018;102;Meatballs;22700.0;2.69;1.88;0;;880328.0;0.25;Meat;Food;Helsinki
+20/05/2018;102;Meatballs;98192.0;1.99;1.52;1;Newspaper;1005752.0;0.25;Meat;Food;Helsinki
+27/05/2018;102;Meatballs;0.0;2.69;1.54;0;;1002284.0;0.25;Meat;Food;Helsinki
+03/06/2018;102;Meatballs;20272.0;2.69;1.9;0;;1020000.0;0.25;Meat;Food;Helsinki
+10/06/2018;102;Meatballs;21272.0;2.69;1.9;0;;1021184.0;0.25;Meat;Food;Helsinki
+17/06/2018;102;Meatballs;21212.0;2.69;1.89;0;;1040288.0;0.25;Meat;Food;Helsinki
+24/06/2018;102;Meatballs;18660.0;2.69;1.88;0;;832684.0;0.25;Meat;Food;Helsinki
+01/07/2018;102;Meatballs;82188.0;1.99;1.54;1;Traffic driver (Leaflet);963952.0;0.25;Meat;Food;Helsinki
+08/07/2018;102;Meatballs;78328.0;1.99;1.53;1;Traffic driver (Leaflet);955644.0;0.25;Meat;Food;Helsinki
+15/07/2018;102;Meatballs;20888.0;2.49;1.88;0;;794452.0;0.25;Meat;Food;Helsinki
+22/07/2018;102;Meatballs;20360.0;2.49;1.95;0;;797336.0;0.25;Meat;Food;Helsinki
+29/07/2018;102;Meatballs;25496.0;2.49;1.9;0;;832348.0;0.25;Meat;Food;Helsinki
+05/08/2018;102;Meatballs;26584.0;2.49;1.92;0;;936288.0;0.25;Meat;Food;Helsinki
+12/08/2018;102;Meatballs;25236.0;2.49;1.88;0;;935528.0;0.25;Meat;Food;Helsinki
+19/08/2018;102;Meatballs;23072.0;2.49;1.88;0;;1010592.0;0.25;Meat;Food;Helsinki
+26/08/2018;102;Meatballs;19608.0;2.49;1.87;0;;989196.0;0.25;Meat;Food;Helsinki
+02/09/2018;102;Meatballs;20400.0;2.49;1.92;0;;1070228.0;0.25;Meat;Food;Helsinki
+09/09/2018;102;Meatballs;24312.0;2.49;2.06;0;;1043248.0;0.25;Meat;Food;Helsinki
+16/09/2018;102;Meatballs;106284.0;1.99;1.52;1;Traffic driver (Leaflet);1155940.0;0.25;Meat;Food;Helsinki
+23/09/2018;102;Meatballs;95308.0;1.99;1.52;1;Traffic driver (Leaflet);1141996.0;0.25;Meat;Food;Helsinki
+30/09/2018;102;Meatballs;97400.0;1.99;1.52;1;Traffic driver (Leaflet);1145700.0;0.25;Meat;Food;Helsinki
+07/10/2018;102;Meatballs;20104.0;2.59;1.87;0;;905316.0;0.25;Meat;Food;Helsinki
+14/10/2018;102;Meatballs;20476.0;2.59;2.0;0;;882740.0;0.25;Meat;Food;Helsinki
+21/10/2018;102;Meatballs;18844.0;2.59;1.88;0;;982748.0;0.25;Meat;Food;Helsinki
+28/10/2018;102;Meatballs;19488.0;2.59;1.95;0;;956016.0;0.25;Meat;Food;Helsinki
+04/11/2018;102;Meatballs;18540.0;2.59;1.93;0;;940692.0;0.25;Meat;Food;Helsinki
+11/11/2018;102;Meatballs;18456.0;2.59;1.93;0;;929556.0;0.25;Meat;Food;Helsinki
+18/11/2018;102;Meatballs;19320.0;2.59;1.88;0;;918140.0;0.25;Meat;Food;Helsinki
+25/11/2018;102;Meatballs;19960.0;2.59;1.87;0;;905212.0;0.25;Meat;Food;Helsinki
+02/12/2018;102;Meatballs;92476.0;1.99;1.52;1;Traffic driver (Leaflet);1052888.0;0.25;Meat;Food;Helsinki
+09/12/2018;102;Meatballs;71052.0;1.99;1.54;1;Traffic driver (Leaflet);1022840.0;0.25;Meat;Food;Helsinki
+16/12/2018;102;Meatballs;16320.0;2.59;2.01;0;;889268.0;0.25;Meat;Food;Helsinki
+23/12/2018;102;Meatballs;19320.0;2.59;2.11;0;;636272.0;0.25;Meat;Food;Helsinki
+30/12/2018;102;Meatballs;17128.0;2.59;1.9;0;;560412.0;0.25;Meat;Food;Helsinki
+07/01/2018;100;Chicken;38144.0;3.79;2.7;0;;451692.0;0.25;Meat;Food;Espoo
+14/01/2018;100;Chicken;36420.0;3.79;2.66;0;;414342.0;0.25;Meat;Food;Espoo
+21/01/2018;100;Chicken;35322.0;3.79;2.66;0;;381854.0;0.25;Meat;Food;Espoo
+28/01/2018;100;Chicken;133974.0;2.89;2.54;1;Star promotion (TV);494738.0;0.25;Meat;Food;Espoo
+04/02/2018;100;Chicken;119808.0;2.89;2.55;1;Star promotion (TV);461214.0;0.25;Meat;Food;Espoo
+11/02/2018;100;Chicken;36698.0;3.59;2.67;0;;302562.0;0.25;Meat;Food;Espoo
+18/02/2018;100;Chicken;23346.0;3.59;2.69;0;;311028.0;0.25;Meat;Food;Espoo
+25/02/2018;100;Chicken;36844.0;3.59;2.62;0;;340518.0;0.25;Meat;Food;Espoo
+04/03/2018;100;Chicken;34742.0;3.59;2.53;0;;352774.0;0.25;Meat;Food;Espoo
+11/03/2018;100;Chicken;164752.0;2.5;2.47;1;Star promotion (TV);478318.0;0.25;Meat;Food;Espoo
+18/03/2018;100;Chicken;33290.0;3.49;2.98;0;;349902.0;0.25;Meat;Food;Espoo
+25/03/2018;100;Chicken;30664.0;3.49;2.52;0;;339930.0;0.25;Meat;Food;Espoo
+01/04/2018;100;Chicken;32492.0;3.49;2.58;0;;328124.0;0.25;Meat;Food;Espoo
+08/04/2018;100;Chicken;43540.0;3.49;2.54;0;;400594.0;0.25;Meat;Food;Espoo
+15/04/2018;100;Chicken;22182.0;3.49;3.14;0;;367256.0;0.25;Meat;Food;Espoo
+22/04/2018;100;Chicken;25622.0;3.49;2.71;0;;369396.0;0.25;Meat;Food;Espoo
+29/04/2018;100;Chicken;23042.0;3.49;2.67;0;;337890.0;0.25;Meat;Food;Espoo
+06/05/2018;100;Chicken;24497.0;3.49;2.67;0;;338284.0;0.25;Meat;Food;Espoo
+13/05/2018;100;Chicken;23949.0;3.49;2.67;0;;338238.0;0.25;Meat;Food;Espoo
+20/05/2018;100;Chicken;23477.0;3.49;2.67;0;;343208.0;0.25;Meat;Food;Espoo
+27/05/2018;100;Chicken;23917.0;3.49;2.67;0;;347008.0;0.25;Meat;Food;Espoo
+03/06/2018;100;Chicken;25742.0;3.49;2.67;0;;352986.0;0.25;Meat;Food;Espoo
+10/06/2018;100;Chicken;40284.0;3.49;2.6;0;;366504.0;0.25;Meat;Food;Espoo
+17/06/2018;100;Chicken;35848.0;3.49;2.58;0;;372664.0;0.25;Meat;Food;Espoo
+24/06/2018;100;Chicken;32758.0;3.49;2.64;0;;337460.0;0.25;Meat;Food;Espoo
+01/07/2018;100;Chicken;39190.0;3.49;2.57;0;;398448.0;0.25;Meat;Food;Espoo
+08/07/2018;100;Chicken;35982.0;3.49;2.61;0;;368540.0;0.25;Meat;Food;Espoo
+15/07/2018;100;Chicken;36576.0;3.49;2.63;0;;371914.0;0.25;Meat;Food;Espoo
+22/07/2018;100;Chicken;36346.0;3.49;2.63;0;;363368.0;0.25;Meat;Food;Espoo
+29/07/2018;100;Chicken;34056.0;3.49;2.62;0;;362152.0;0.25;Meat;Food;Espoo
+05/08/2018;100;Chicken;33404.0;3.49;2.62;0;;372870.0;0.25;Meat;Food;Espoo
+12/08/2018;100;Chicken;37688.0;3.49;2.59;0;;401170.0;0.25;Meat;Food;Espoo
+19/08/2018;100;Chicken;37396.0;3.49;2.58;0;;409186.0;0.25;Meat;Food;Espoo
+26/08/2018;100;Chicken;39652.0;3.49;2.61;0;;409198.0;0.25;Meat;Food;Espoo
+02/09/2018;100;Chicken;86076.0;2.99;2.59;1;Newspaper half page;620284.0;0.25;Meat;Food;Espoo
+09/09/2018;100;Chicken;32668.0;3.49;2.67;0;;496164.0;0.25;Meat;Food;Espoo
+16/09/2018;100;Chicken;37956.0;3.49;2.74;0;;415016.0;0.25;Meat;Food;Espoo
+23/09/2018;100;Chicken;36688.0;3.49;2.68;0;;426596.0;0.25;Meat;Food;Espoo
+30/09/2018;100;Chicken;35110.0;3.49;2.68;0;;418292.0;0.25;Meat;Food;Espoo
+07/10/2018;100;Chicken;105180.0;2.89;2.62;1;Star promotion (TV);498128.0;0.25;Meat;Food;Espoo
+14/10/2018;100;Chicken;98928.0;2.89;2.74;1;Star promotion (TV);466830.0;0.25;Meat;Food;Espoo
+21/10/2018;100;Chicken;35264.0;3.69;2.82;0;;383512.0;0.25;Meat;Food;Espoo
+28/10/2018;100;Chicken;34138.0;3.69;2.69;0;;375854.0;0.25;Meat;Food;Espoo
+04/11/2018;100;Chicken;28050.0;3.69;2.83;0;;374920.0;0.25;Meat;Food;Espoo
+11/11/2018;100;Chicken;32066.0;3.69;2.77;0;;371690.0;0.25;Meat;Food;Espoo
+18/11/2018;100;Chicken;30810.0;3.69;2.71;0;;376988.0;0.25;Meat;Food;Espoo
+25/11/2018;100;Chicken;30770.0;3.69;2.69;0;;387916.0;0.25;Meat;Food;Espoo
+02/12/2018;100;Chicken;30528.0;3.69;2.69;0;;364056.0;0.25;Meat;Food;Espoo
+09/12/2018;100;Chicken;35048.0;3.69;2.76;0;;379086.0;0.25;Meat;Food;Espoo
+16/12/2018;100;Chicken;121020.0;2.79;2.54;1;Star promotion (TV);485006.0;0.25;Meat;Food;Espoo
+23/12/2018;100;Chicken;88032.0;2.79;2.77;1;Star promotion (TV);444656.0;0.25;Meat;Food;Espoo
+30/12/2018;100;Chicken;49718.0;3.69;2.86;0;;381986.0;0.25;Meat;Food;Espoo
+07/01/2018;101;Chocolate bar;24865.0;0.75;0.42;0;;450385.0;0.35;Sweet;Food;Espoo
+14/01/2018;101;Chocolate bar;32265.0;0.75;0.42;0;;590175.0;0.35;Sweet;Food;Espoo
+21/01/2018;101;Chocolate bar;33495.0;0.75;0.42;0;;620765.0;0.35;Sweet;Food;Espoo
+28/01/2018;101;Chocolate bar;35515.0;0.75;0.42;0;;769490.0;0.35;Sweet;Food;Espoo
+04/02/2018;101;Chocolate bar;38640.0;0.75;0.42;0;;784595.0;0.35;Sweet;Food;Espoo
+11/02/2018;101;Chocolate bar;138635.0;0.59;0.42;1;;841135.0;0.35;Sweet;Food;Espoo
+18/02/2018;101;Chocolate bar;127630.0;0.59;0.42;1;;830740.0;0.35;Sweet;Food;Espoo
+25/02/2018;101;Chocolate bar;129315.0;0.59;0.42;1;;847515.0;0.35;Sweet;Food;Espoo
+04/03/2018;101;Chocolate bar;137550.0;0.59;0.42;1;;838540.0;0.35;Sweet;Food;Espoo
+11/03/2018;101;Chocolate bar;49595.0;0.79;0.42;0;;779205.0;0.35;Sweet;Food;Espoo
+18/03/2018;101;Chocolate bar;53400.0;0.79;0.42;0;;864220.0;0.35;Sweet;Food;Espoo
+25/03/2018;101;Chocolate bar;57590.0;0.79;0.42;0;;810245.0;0.35;Sweet;Food;Espoo
+01/04/2018;101;Chocolate bar;51095.0;0.79;0.42;0;;751040.0;0.35;Sweet;Food;Espoo
+08/04/2018;101;Chocolate bar;49195.0;0.79;0.42;0;;652975.0;0.35;Sweet;Food;Espoo
+15/04/2018;101;Chocolate bar;53030.0;0.79;0.42;0;;751300.0;0.35;Sweet;Food;Espoo
+22/04/2018;101;Chocolate bar;52725.0;0.79;0.42;0;;779550.0;0.35;Sweet;Food;Espoo
+29/04/2018;101;Chocolate bar;49160.0;0.79;0.42;0;;777885.0;0.35;Sweet;Food;Espoo
+06/05/2018;101;Chocolate bar;46995.0;0.79;0.42;0;;756565.0;0.35;Sweet;Food;Espoo
+13/05/2018;101;Chocolate bar;41675.0;0.79;0.42;0;;737810.0;0.35;Sweet;Food;Espoo
+20/05/2018;101;Chocolate bar;45180.0;0.79;0.42;0;;753150.0;0.35;Sweet;Food;Espoo
+27/05/2018;101;Chocolate bar;43175.0;0.79;0.42;0;;745590.0;0.35;Sweet;Food;Espoo
+03/06/2018;101;Chocolate bar;44815.0;0.79;0.42;0;;748070.0;0.35;Sweet;Food;Espoo
+10/06/2018;101;Chocolate bar;45306.0;0.75;0.42;0;;676765.0;0.35;Sweet;Food;Espoo
+17/06/2018;101;Chocolate bar;39375.0;0.75;0.42;0;;675170.0;0.35;Sweet;Food;Espoo
+24/06/2018;101;Chocolate bar;37395.0;0.75;0.42;0;;677205.0;0.35;Sweet;Food;Espoo
+01/07/2018;101;Chocolate bar;37730.0;0.75;0.42;0;;642510.0;0.35;Sweet;Food;Espoo
+08/07/2018;101;Chocolate bar;32595.0;0.75;0.42;0;;611480.0;0.35;Sweet;Food;Espoo
+15/07/2018;101;Chocolate bar;34205.0;0.75;0.42;0;;619460.0;0.35;Sweet;Food;Espoo
+22/07/2018;101;Chocolate bar;30655.0;0.75;0.42;0;;569275.0;0.35;Sweet;Food;Espoo
+29/07/2018;101;Chocolate bar;31015.0;0.75;0.42;0;;547595.0;0.35;Sweet;Food;Espoo
+05/08/2018;101;Chocolate bar;32535.0;0.75;0.42;0;;611510.0;0.35;Sweet;Food;Espoo
+12/08/2018;101;Chocolate bar;34995.0;0.75;0.42;0;;676365.0;0.35;Sweet;Food;Espoo
+19/08/2018;101;Chocolate bar;41330.0;0.75;0.42;0;;748235.0;0.35;Sweet;Food;Espoo
+26/08/2018;101;Chocolate bar;401540.0;0.5;0.42;1;Traffic driver (Leaflet);896265.0;0.35;Sweet;Food;Espoo
+02/09/2018;101;Chocolate bar;54995.0;0.75;0.42;0;;757650.0;0.35;Sweet;Food;Espoo
+09/09/2018;101;Chocolate bar;48990.0;0.75;0.42;0;;748255.0;0.35;Sweet;Food;Espoo
+16/09/2018;101;Chocolate bar;38975.0;0.75;0.42;0;;768085.0;0.35;Sweet;Food;Espoo
+23/09/2018;101;Chocolate bar;42685.0;0.75;0.42;0;;793065.0;0.35;Sweet;Food;Espoo
+30/09/2018;101;Chocolate bar;46510.0;0.75;0.42;0;;785555.0;0.35;Sweet;Food;Espoo
+07/10/2018;101;Chocolate bar;48255.0;0.75;0.42;0;;806270.0;0.35;Sweet;Food;Espoo
+14/10/2018;101;Chocolate bar;74795.0;0.75;0.42;0;;775870.0;0.35;Sweet;Food;Espoo
+21/10/2018;101;Chocolate bar;461350.0;0.5;0.42;1;Traffic driver (Leaflet);916920.0;0.35;Sweet;Food;Espoo
+28/10/2018;101;Chocolate bar;59725.0;0.75;0.42;0;;747205.0;0.35;Sweet;Food;Espoo
+04/11/2018;101;Chocolate bar;51790.0;0.75;0.42;0;;747305.0;0.35;Sweet;Food;Espoo
+11/11/2018;101;Chocolate bar;51040.0;0.75;0.42;0;;741540.0;0.35;Sweet;Food;Espoo
+18/11/2018;101;Chocolate bar;51405.0;0.75;0.42;0;;767685.0;0.35;Sweet;Food;Espoo
+25/11/2018;101;Chocolate bar;42700.0;0.75;0.42;0;;745500.0;0.35;Sweet;Food;Espoo
+02/12/2018;101;Chocolate bar;45565.0;0.75;0.42;0;;763175.0;0.35;Sweet;Food;Espoo
+09/12/2018;101;Chocolate bar;39570.0;0.75;0.42;0;;675810.0;0.35;Sweet;Food;Espoo
+16/12/2018;101;Chocolate bar;43055.0;0.75;0.42;0;;707070.0;0.35;Sweet;Food;Espoo
+23/12/2018;101;Chocolate bar;27555.0;0.75;0.42;0;;479015.0;0.35;Sweet;Food;Espoo
+30/12/2018;101;Chocolate bar;16525.0;0.75;0.42;0;;324830.0;0.35;Sweet;Food;Espoo
+07/01/2018;102;Meatballs;15484.0;2.69;1.86;0;;697176.0;0.25;Meat;Food;Espoo
+14/01/2018;102;Meatballs;18908.0;2.69;1.93;0;;927316.0;0.25;Meat;Food;Espoo
+21/01/2018;102;Meatballs;18308.0;2.69;1.87;0;;876968.0;0.25;Meat;Food;Espoo
+28/01/2018;102;Meatballs;17016.0;2.69;1.88;0;;906644.0;0.25;Meat;Food;Espoo
+04/02/2018;102;Meatballs;21972.0;2.69;1.87;0;;920376.0;0.25;Meat;Food;Espoo
+11/02/2018;102;Meatballs;24332.0;2.69;1.87;0;;918916.0;0.25;Meat;Food;Espoo
+18/02/2018;102;Meatballs;22500.0;2.69;1.98;0;;880076.0;0.25;Meat;Food;Espoo
+25/02/2018;102;Meatballs;24240.0;2.69;1.9;0;;869528.0;0.25;Meat;Food;Espoo
+04/03/2018;102;Meatballs;26592.0;2.69;1.86;0;;911392.0;0.25;Meat;Food;Espoo
+11/03/2018;102;Meatballs;24852.0;2.69;1.86;0;;917608.0;0.25;Meat;Food;Espoo
+18/03/2018;102;Meatballs;26820.0;2.69;1.88;0;;929548.0;0.25;Meat;Food;Espoo
+25/03/2018;102;Meatballs;59856.0;2.29;1.49;1;Traffic driver (Leaflet);1047400.0;0.25;Meat;Food;Espoo
+01/04/2018;102;Meatballs;54256.0;2.29;1.61;1;Traffic driver (Leaflet);1030652.0;0.25;Meat;Food;Espoo
+08/04/2018;102;Meatballs;20228.0;2.69;2.05;0;;919836.0;0.25;Meat;Food;Espoo
+15/04/2018;102;Meatballs;23780.0;2.69;2.09;0;;924200.0;0.25;Meat;Food;Espoo
+22/04/2018;102;Meatballs;21352.0;2.69;1.96;0;;924724.0;0.25;Meat;Food;Espoo
+29/04/2018;102;Meatballs;20096.0;2.69;1.88;0;;924876.0;0.25;Meat;Food;Espoo
+06/05/2018;102;Meatballs;20884.0;2.69;1.89;0;;784124.0;0.25;Meat;Food;Espoo
+13/05/2018;102;Meatballs;22700.0;2.69;1.88;0;;880328.0;0.25;Meat;Food;Espoo
+20/05/2018;102;Meatballs;98192.0;1.99;1.52;1;Newspaper;1005752.0;0.25;Meat;Food;Espoo
+27/05/2018;102;Meatballs;0.0;2.69;1.54;0;;1002284.0;0.25;Meat;Food;Espoo
+03/06/2018;102;Meatballs;20272.0;2.69;1.9;0;;1020000.0;0.25;Meat;Food;Espoo
+10/06/2018;102;Meatballs;21272.0;2.69;1.9;0;;1021184.0;0.25;Meat;Food;Espoo
+17/06/2018;102;Meatballs;21212.0;2.69;1.89;0;;1040288.0;0.25;Meat;Food;Espoo
+24/06/2018;102;Meatballs;18660.0;2.69;1.88;0;;832684.0;0.25;Meat;Food;Espoo
+01/07/2018;102;Meatballs;82188.0;1.99;1.54;1;Traffic driver (Leaflet);963952.0;0.25;Meat;Food;Espoo
+08/07/2018;102;Meatballs;78328.0;1.99;1.53;1;Traffic driver (Leaflet);955644.0;0.25;Meat;Food;Espoo
+15/07/2018;102;Meatballs;20888.0;2.49;1.88;0;;794452.0;0.25;Meat;Food;Espoo
+22/07/2018;102;Meatballs;20360.0;2.49;1.95;0;;797336.0;0.25;Meat;Food;Espoo
+29/07/2018;102;Meatballs;25496.0;2.49;1.9;0;;832348.0;0.25;Meat;Food;Espoo
+05/08/2018;102;Meatballs;26584.0;2.49;1.92;0;;936288.0;0.25;Meat;Food;Espoo
+12/08/2018;102;Meatballs;25236.0;2.49;1.88;0;;935528.0;0.25;Meat;Food;Espoo
+19/08/2018;102;Meatballs;23072.0;2.49;1.88;0;;1010592.0;0.25;Meat;Food;Espoo
+26/08/2018;102;Meatballs;19608.0;2.49;1.87;0;;989196.0;0.25;Meat;Food;Espoo
+02/09/2018;102;Meatballs;20400.0;2.49;1.92;0;;1070228.0;0.25;Meat;Food;Espoo
+09/09/2018;102;Meatballs;24312.0;2.49;2.06;0;;1043248.0;0.25;Meat;Food;Espoo
+16/09/2018;102;Meatballs;106284.0;1.99;1.52;1;Traffic driver (Leaflet);1155940.0;0.25;Meat;Food;Espoo
+23/09/2018;102;Meatballs;95308.0;1.99;1.52;1;Traffic driver (Leaflet);1141996.0;0.25;Meat;Food;Espoo
+30/09/2018;102;Meatballs;97400.0;1.99;1.52;1;Traffic driver (Leaflet);1145700.0;0.25;Meat;Food;Espoo
+07/10/2018;102;Meatballs;20104.0;2.59;1.87;0;;905316.0;0.25;Meat;Food;Espoo
+14/10/2018;102;Meatballs;20476.0;2.59;2.0;0;;882740.0;0.25;Meat;Food;Espoo
+21/10/2018;102;Meatballs;18844.0;2.59;1.88;0;;982748.0;0.25;Meat;Food;Espoo
+28/10/2018;102;Meatballs;19488.0;2.59;1.95;0;;956016.0;0.25;Meat;Food;Espoo
+04/11/2018;102;Meatballs;18540.0;2.59;1.93;0;;940692.0;0.25;Meat;Food;Espoo
+11/11/2018;102;Meatballs;18456.0;2.59;1.93;0;;929556.0;0.25;Meat;Food;Espoo
+18/11/2018;102;Meatballs;19320.0;2.59;1.88;0;;918140.0;0.25;Meat;Food;Espoo
+25/11/2018;102;Meatballs;19960.0;2.59;1.87;0;;905212.0;0.25;Meat;Food;Espoo
+02/12/2018;102;Meatballs;92476.0;1.99;1.52;1;Traffic driver (Leaflet);1052888.0;0.25;Meat;Food;Espoo
+09/12/2018;102;Meatballs;71052.0;1.99;1.54;1;Traffic driver (Leaflet);1022840.0;0.25;Meat;Food;Espoo
+16/12/2018;102;Meatballs;16320.0;2.59;2.01;0;;889268.0;0.25;Meat;Food;Espoo
+23/12/2018;102;Meatballs;19320.0;2.59;2.11;0;;636272.0;0.25;Meat;Food;Espoo
+30/12/2018;102;Meatballs;17128.0;2.59;1.9;0;;560412.0;0.25;Meat;Food;Espoo
