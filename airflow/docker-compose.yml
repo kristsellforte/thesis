@@ -35,6 +35,7 @@ services:
       - ./data:/data
       - ./models:/models
       - ./scores:/scores
+      - ./config:/config
       # Uncomment to include custom plugins
       # - ./plugins:/usr/local/airflow/plugins
     ports:
@@ -69,6 +70,7 @@ services:
       - ./data:/data
       - ./models:/models
       - ./scores:/scores
+      - ./config:/config
 #      - ./plugins:/usr/local/airflow/plugins
     environment:
       - LOAD_EX=n

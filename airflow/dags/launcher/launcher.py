@@ -97,6 +97,10 @@ def launch_docker_container(**context):
                         '/Users/kristskreics/code/thesis2/thesis/airflow/scores': {
                             'bind': '/scores',
                             'mode': 'rw'
+                        },
+                        '/Users/kristskreics/code/thesis2/thesis/airflow/config': {
+                            'bind': '/config',
+                            'mode': 'rw'
                         }
     }
 

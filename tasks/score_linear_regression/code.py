@@ -18,26 +18,6 @@ def get_pulled_model(scores):
     return model
 
 
-def get_yaml_params():
-    try:
-        with open("params.yaml", 'r') as f:
-            return yaml.safe_load(f)
-    except FileNotFoundError:
-        return {}
-
-
-def get_args_params():
-    args = sys.argv
-    print(f"Args are {args}")
-    if args is not None:
-        try:
-            return json.loads(args[1])
-        except ValueError:
-            print('Failed to parse args.')
-            return {}
-    return {}
-
-
 def get_execution_id():    
     try:
         return os.environ['EXECUTION_ID']
@@ -83,27 +63,14 @@ def save_score(score, scores_path):
         scores[version_number] = score
         json.dump(scores, scores_json, indent=4)
 
-        # save tar for sharing across airflow tasks
-        # with tarfile.open('/tmp/result.tgz', "w:gz") as tar:
-            # abs_path = os.path.abspath(scores_path)
-            # tar.add(abs_path, arcname=os.path.basename(scores_path), recursive=False)
-
 
 def main():
     execution_id = get_execution_id()
     print(f"Execution id: {execution_id}")
-    # yaml_params = get_yaml_params()
-    # print(f"Yaml params are {yaml_params}")
-
-    # arg_params = get_args_params()
-    # print(f"Arg Params are {arg_params}")
     scores_path = '/scores/linear_regression.json'
     data_path = '/data/train.csv'
     scores = get_scores(scores_path)
-    # pulled_model = get_pulled_model(scores)
     model = get_model(scores)
-    print(model)
-    # print(pulled_model)
     model_score = score_model(model, data_path)
     save_score(model_score, scores_path)
 

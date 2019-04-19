@@ -1,0 +1,17 @@
+{
+    "poor": {
+    	"aggregation": ["date", "location", "category2"],
+    	"x": ["date", "location", "category2"],
+    	"y": ["sales"]
+    },
+    "medium": {
+		"aggregation": ["date", "location"],
+    	"x": ["date", "location", "category1"],
+    	"y": ["sales"]
+    },
+    "high": {
+    	"aggregation": ["date", "item_id"],
+    	"x": ["item_id", "date", "unit_price", "location"],
+    	"y": ["sales"]
+    }
+}
