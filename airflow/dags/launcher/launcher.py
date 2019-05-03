@@ -5,6 +5,7 @@ import json
 import os
 import tempfile
 import pickle
+import shlex
 
 from airflow.models import TaskInstance
 from docker import Client
@@ -12,7 +13,6 @@ from docker.errors import NotFound
 from sklearn import linear_model
 
 log = logging.getLogger(__name__)
-
 
 def combine_xcom_values(xcoms):
     if xcoms is None or xcoms == [] or xcoms == () or xcoms == (None, ):
@@ -69,15 +69,15 @@ def pull_all_parent_xcoms(context):
 
 def launch_docker_container(**context):
     image_name = context['image_name']
+    QUALITY_SETTING = 'poor'
     client: Client = docker.from_env()
 
     log.info(f"Creating image {image_name}")
 
     execution_id = context['dag_run'].run_id
 
-    command = ''
-
-    args_json = pull_all_parent_xcoms(context)
+    quality_dict = { 'quality_setting': QUALITY_SETTING }
+    command = shlex.quote(json.dumps(quality_dict))
 
     environment = {
         'EXECUTION_ID': execution_id
@@ -104,7 +104,7 @@ def launch_docker_container(**context):
                         }
     }
 
-    host_config = client.create_host_config(binds=volume_bindings)
+    host_config = client.create_host_config(binds=volume_bindings, mem_limit='100m')
 
     container = client.create_container(image=image_name, environment=environment, command=command, volumes=volumes, host_config=host_config)
 
@@ -123,4 +123,6 @@ def launch_docker_container(**context):
 
     result = untar_file_and_get_result_json(client, container)
     log.info(f"Result was {result}")
+    # prin
+    # context['task_instance'].xcom_push('quality_setting', quality_setting, context['execution_date'])
     context['task_instance'].xcom_push('data', result, context['execution_date'])

@@ -1,16 +1,19 @@
 {
     "poor": {
-    	"aggregation": ["date", "location", "category2"],
+    	"aggregation": ["date"],
+        "categorical": ["location", "category2"],
     	"x": ["date", "location", "category2"],
     	"y": ["sales"]
     },
     "medium": {
-		"aggregation": ["date", "location"],
+		"aggregation": ["date"],
+        "categorical": ["location", "category1"],
     	"x": ["date", "location", "category1"],
     	"y": ["sales"]
     },
     "high": {
-    	"aggregation": ["date", "item_id"],
+    	"aggregation": ["date", "unit_price"],
+        "categorical": ["item_id", "location"],
     	"x": ["item_id", "date", "unit_price", "location"],
     	"y": ["sales"]
     }

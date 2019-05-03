@@ -5,7 +5,18 @@ import json
 import pickle
 import tarfile
 import os
+import sys
 from datetime import datetime
+
+def get_args_params():
+    args = sys.argv
+    if args is not None:
+        try:
+            return json.loads(args[1])
+        except ValueError:
+            print('Failed to parse args.')
+            return {}
+    return {}
 
 
 def get_data(data_path):
@@ -16,10 +27,21 @@ def get_data(data_path):
         return {}
 
 
-def prepare_data(df):
-    df['date'] = df['date'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d').toordinal())
-    x = df[['date', 'store', 'item']]
-    y = df[['sales']]
+def get_quality_preset(quality_presets_path, params):
+    try:
+        with open(quality_presets_path, 'r') as f:
+            presets = json.load(f)
+            return presets[params['quality_setting']]
+    except FileNotFoundError:
+        return {}
+
+
+def prepare_data(df, quality_preset):
+    df['date'] = df['date'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y').toordinal())
+    x_columns = list(df.columns)
+    x_columns.remove('sales')
+    x = df[x_columns]
+    y = df[quality_preset['y']]
 
     return (x, y)
 
@@ -55,20 +77,16 @@ def save_model(model, scores):
 def main():
     scores_path = '/scores/linear_regression.json'
     data_path = '/data/train.csv'
-    # meme = pull_function()
+    quality_presets_path = '/config/quality.json'
+    params = get_args_params()
+    quality_preset = get_quality_preset(quality_presets_path, params)
     df = get_data(data_path)
-    x, y = prepare_data(df)
+    x, y = prepare_data(df, quality_preset)
     model = linear_regression_sklearn(x, y)
     scores = get_scores(scores_path)
-    # save_scores(scores)
     save_model(model, scores)
 
 
 if __name__ == "__main__":
 
     main()
-
-# date = datetime.strptime('2018-12-31', '%Y-%m-%d').toordinal()
-# store = 10
-# item = 50
-# print ('Predicted sales: \n', regr.predict([[date, store, item]]))
