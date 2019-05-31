@@ -1,4 +1,4 @@
-FROM puckel/docker-airflow:1.10.2
+FROM alvyl/docker-airflow:1.10.3
 
 USER root
 

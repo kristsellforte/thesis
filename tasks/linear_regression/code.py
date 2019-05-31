@@ -7,6 +7,11 @@ import tarfile
 import os
 import sys
 from datetime import datetime
+import logging
+import time
+# custom libs
+from performance_monitor import PerformanceMonitor as PerformanceMonitor
+from store import Store as Store
 
 def get_args_params():
     args = sys.argv
@@ -17,23 +22,6 @@ def get_args_params():
             print('Failed to parse args.')
             return {}
     return {}
-
-
-def get_data(data_path):
-    try:
-        with open(data_path, 'r') as f:
-            return pd.read_csv(f)
-    except FileNotFoundError:
-        return {}
-
-
-def get_quality_preset(quality_presets_path, params):
-    try:
-        with open(quality_presets_path, 'r') as f:
-            presets = json.load(f)
-            return presets[params['quality_setting']]
-    except FileNotFoundError:
-        return {}
 
 
 def prepare_data(df, quality_preset):
@@ -55,36 +43,35 @@ def linear_regression_sklearn(x, y):
     return regr
 
 
-def get_scores(scores_path):
-    try:
-        with open(scores_path, 'r') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return { '0': {} }
-
-
-def save_model(model, scores):
-    version_number = int(max(scores.keys())) + 1
-    pickle_path = '/models/linear_regression/' + str(version_number) + '.pkl'
-    pickle.dump(model, open(pickle_path, 'wb'))
-
-    # save tar for sharing across airflow tasks
-    # with tarfile.open('/tmp/result.tgz', "w:gz") as tar:
-    #     abs_path = os.path.abspath(pickle_path)
-    #     tar.add(abs_path, arcname=os.path.basename(pickle_path), recursive=False)
+def save_model(model, path):
+    pickle.dump(model, open(path.split('/')[-1], 'wb'))
 
 
 def main():
-    scores_path = '/scores/linear_regression.json'
-    data_path = '/data/train.csv'
-    quality_presets_path = '/config/quality.json'
     params = get_args_params()
-    quality_preset = get_quality_preset(quality_presets_path, params)
-    df = get_data(data_path)
-    x, y = prepare_data(df, quality_preset)
-    model = linear_regression_sklearn(x, y)
-    scores = get_scores(scores_path)
-    save_model(model, scores)
+    pm = PerformanceMonitor(task_name='linear_regression', pipeline_id=params['pipeline_id'])
+    store = Store(performance_monitor=pm, bucket_name='forecasting-pipeline-files')
+    pm.start()
+    time.sleep(5)
+    try:
+        quality_setting = 'high'
+        scores_path = 'scores/linear_regression.json'
+        data_path = 'data/train.csv'
+        quality_presets_path = 'config/quality.json'
+        presets = store.get_json(quality_presets_path)
+        preset = presets[quality_setting]
+        df = store.get_csv(data_path)
+        x, y = prepare_data(df, preset)
+        model = linear_regression_sklearn(x, y)
+        scores = store.get_json(scores_path)
+        version_number = max(map(int, scores.keys())) + 1
+        pickle_path = 'models/linear_regression/' + str(version_number) + '.pkl'
+        save_model(model, pickle_path)
+        store.save_file(pickle_path)
+        pm.stop()
+    except Exception as e:
+        logging.fatal(e, exc_info=True)
+        pm.stop()
 
 
 if __name__ == "__main__":

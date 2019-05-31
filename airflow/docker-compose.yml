@@ -2,7 +2,6 @@ version: '2.1'
 services:
   redis:
     image: 'redis:3.2.7'
-    # command: redis-server --requirepass redispass
 
   postgres:
     image: postgres:9.6
@@ -10,10 +9,6 @@ services:
       - POSTGRES_USER=airflow2
       - POSTGRES_PASSWORD=airflow2
       - POSTGRES_DB=airflow2
-    # Uncomment these lines to persist data on the local filesystem.
-    #     - PGDATA=/var/lib/postgresql/data/pgdata
-    # volumes:
-    #     - ./pgdata:/var/lib/postgresql/data/pgdata
 
   webserver:
     image: puckel-airflow-with-docker-inside:latest
@@ -36,6 +31,7 @@ services:
       - ./models:/models
       - ./scores:/scores
       - ./config:/config
+      - ./.aws:/.aws
       # Uncomment to include custom plugins
       # - ./plugins:/usr/local/airflow/plugins
     ports:
@@ -71,6 +67,7 @@ services:
       - ./models:/models
       - ./scores:/scores
       - ./config:/config
+      - ./.aws:/.aws
 #      - ./plugins:/usr/local/airflow/plugins
     environment:
       - LOAD_EX=n
@@ -93,6 +90,7 @@ services:
       - ./data:/data
       - ./models:/models
       - ./scores:/scores
+      - ./.aws:/.aws
     environment:
       - DOCKER_HOST=tcp://socat:2375
       - FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
@@ -106,51 +104,89 @@ services:
     expose:
       - "2375"
 
-  influxdbData:
-    image: busybox
-    volumes:
-      - ./data/influxdb:/data
-
-  influxdb:
-    image: tutum/influxdb:0.9
-    restart: always
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
+    container_name: elasticsearch
     environment:
-      - PRE_CREATE_DB=cadvisor
-    ports:
-      - "8083:8083"
-      - "8086:8086"
-    expose:
-      - "8090"
-      - "8099"
-    volumes_from:
-      - "influxdbData"
-
-  cadvisor:
-    image: google/cadvisor:v0.29.0
-    links:
-      - influxdb:influxsrv
-    command: -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influxsrv:8086
-    restart: always
-    ports:
-      - "8082:8080"
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - discovery.zen.minimum_master_nodes=2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
     volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /var/lib/docker/:/var/lib/docker:ro
+      - esdata1:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
 
-  # grafana:
-  #   image: grafana/grafana:2.6.0
-  #   restart: always
-  #   links:
-  #     - influxdb:influxsrv
-  #   ports:
-  #     - "3000:3000"
-  #   environment:
-  #     - HTTP_USER=admin
-  #     - HTTP_PASS=admin
-  #     - INFLUXDB_HOST=influxsrv
-  #     - INFLUXDB_PORT=8086
-  #     - INFLUXDB_NAME=cadvisor
-  #     - INFLUXDB_USER=root
-  #     - INFLUXDB_PASS=root
+  elasticsearch2:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
+    container_name: elasticsearch2
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "discovery.zen.ping.unicast.hosts=elasticsearch"
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+      - discovery.zen.minimum_master_nodes=2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata2:/usr/share/elasticsearch/data
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.2
+    container_name: kibana
+    environment:
+      SERVER_NAME: kibana.local
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+    ports:
+      - 5601:5601
+
+  headPlugin:
+    image: mobz/elasticsearch-head:5
+    container_name: head
+    ports:
+      - '9100:9100'
+
+  rabbitmq:
+    image: rabbitmq:3.7-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    volumes:
+      - ./rabbitmqdata:/var/lib/rabbitmq
+    ports:
+      - 15672:15672
+      - 5672:5672
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+
+  elasticsearch_consumer:
+    image: elasticsearch_consumer
+    container_name: elasticsearch_consumer
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+      - elasticsearch2
+
+  control_consumer:
+    image: control_consumer
+    container_name: control_consumer
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+      - elasticsearch2
+
+volumes:
+  esdata1:
+    driver: local
+  esdata2:
+    driver: local

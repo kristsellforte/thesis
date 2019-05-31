@@ -6,6 +6,7 @@ import os
 import tempfile
 import pickle
 import shlex
+import requests
 
 from airflow.models import TaskInstance
 from docker import Client
@@ -68,15 +69,20 @@ def pull_all_parent_xcoms(context):
 
 
 def launch_docker_container(**context):
+    print('FROM CONTAINER LAUNCHER', flush=True)
+    response = requests.put('http://elasticsearch:9200/metrics')
+    print(response)
+
     image_name = context['image_name']
-    QUALITY_SETTING = 'poor'
+    pipeline_id = context['pipeline_id']
+    QUALITY_SETTING = 'high'
     client: Client = docker.from_env()
 
     log.info(f"Creating image {image_name}")
 
     execution_id = context['dag_run'].run_id
 
-    quality_dict = { 'quality_setting': QUALITY_SETTING }
+    quality_dict = { 'quality_setting': QUALITY_SETTING, 'pipeline_id': pipeline_id }
     command = shlex.quote(json.dumps(quality_dict))
 
     environment = {
@@ -104,7 +110,7 @@ def launch_docker_container(**context):
                         }
     }
 
-    host_config = client.create_host_config(binds=volume_bindings, mem_limit='100m')
+    host_config = client.create_host_config(network_mode="host")
 
     container = client.create_container(image=image_name, environment=environment, command=command, volumes=volumes, host_config=host_config)
 

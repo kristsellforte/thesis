@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-sleep 10s
-
+echo "Before sleep"
+sleep 5s
+echo "After sleep"
+echo {1..9000000}

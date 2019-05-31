@@ -15,6 +15,9 @@ RUN ipython kernel install --user --name=airflow_jupyter
 RUN mkdir main
 
 COPY code.py ./main/code.py
+COPY performance_monitor.py ./main/performance_monitor.py
+COPY store.py ./main/store.py
+COPY credentials.py ./main/credentials.py
 
 WORKDIR main
 ENTRYPOINT ["python", "code.py"]

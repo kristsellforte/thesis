@@ -1,2 +1,6 @@
 .DS_Store
 airflow/data/influxdb
+.aws
+credentials.py
+__pycache__
+rabbitmqdata
