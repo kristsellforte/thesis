@@ -1,6 +1,6 @@
 boto3==1.9.148
 botocore==1.12.148
-certifi==2018.11.29
+certifi==2022.12.7
 chardet==3.0.4
 docker-py==1.10.6
 docker-pycreds==0.4.0
